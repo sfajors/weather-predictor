@@ -1,0 +1,103 @@
+body {
+    background-color: #357266;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 40px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.heading-container {
+    background-color: #0e3b43;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    height: 180px;
+}
+
+.heading {
+    font-variant: all-small-caps;
+    font-size: 2.75em;
+    padding: 1em;
+}
+
+input {
+    width: 200px;
+}
+
+label, button {
+    margin-top: 30px;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.radio-container {
+    display: block;
+    margin-top: 5px;
+  }
+
+  .radio-container input[type="radio"] {
+    margin-right: 0;
+    /* Add other styles like font-size, color, etc. as needed */
+  }  
+
+.predict-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#predictButton {
+    background-color: #e8f1ec;
+    color: #A3BBAD;
+    border: 3px solid #A3BBAD;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+    
+    padding: 8px 10px;
+}
+
+#predictButton:hover {
+    background-color: #A3BBAD;
+    text-decoration: underline;
+    color: #e8f1ec;
+    border: 3px solid #e8f1ec;
+}
+
+#prediction {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.results-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 20px;
+        font-size: 0.9em;
+    }
+
+    label, button {
+        margin-top: 10px;
+    }
+}
+
+/* Enhanced result display */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    width: 80vw;
+    box-shadow: 2px 8px 10px rgba(49, 37, 9, 0.476);
+    background-color: #65532F;
+    display: none; /* Hidden by default until a prediction is made */
+}

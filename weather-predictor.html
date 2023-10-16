@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Predictor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="weather-predictor.css">
+</head>
+<body>
+    <div class="heading-container">
+        <h2 class="heading">Weather Predictor</h2>
+    </div>
+    <label>
+        Temperature:
+        <input type="number" id="temperature" required placeholder="e.g. 25">
+        <div class="radio-container">
+            <input type="radio" name="temperatureScale" value="Celsius" checked>°C
+            <input type="radio" name="temperatureScale" value="Fahrenheit">°F
+        </div>
+    </label>
+    <label>
+        Humidity (%):
+        <input type="number" id="humidity" required min="0" max="100" placeholder="e.g. 60">
+    </label>
+    <label>
+        Pressure (hPa):
+        <input type="number" id="pressure" required min="500" max="1100" placeholder="e.g. 1000">
+    </label>
+    <label>
+        Wind Speed (km/h):
+        <input type="number" id="windSpeed" required min="0" max="100" placeholder="e.g. 10">
+    </label>
+    <div class="predict-button">
+        <button id="predictButton" onclick="predictWeather()">Predict</button>
+    </div>
+    <div class="results-pc">
+        <div id="loading" style="display:none;">Processing...</div>
+        <div id="result"><p id="prediction"></p></div>
+    </div>
+
+    <script src="weather-predictor.js"></script>
+</body>
+</html>
